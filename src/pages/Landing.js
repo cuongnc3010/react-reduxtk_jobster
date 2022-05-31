@@ -1,11 +1,11 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import { Logo } from '../components'
 import main from '../assets/images/main.svg'
 import Wrapper from '../assets/wrappers/LandingPage'
 
 const Landing = () => {
   return (
-    <Wrapper>
+    <Wrapper className='full-page'>
       <nav>
         <Logo />
       </nav>
@@ -21,7 +21,9 @@ const Landing = () => {
             art party, vinyl yr shabby chic master cleanse godard polaroid
             occupy.
           </p>
-          <button className='btn btn-hero'>Login/Register</button>
+          <Link to='/' className='btn btn-hero'>
+            Login/Register
+          </Link>
         </div>
         <img src={main} alt='job hunt' className='img main-img' />
       </div>

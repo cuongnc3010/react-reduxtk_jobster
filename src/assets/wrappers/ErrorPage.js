@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Wrapper = styled.main`
   text-align: center;
@@ -19,11 +19,11 @@ const Wrapper = styled.main`
     margin-bottom: 0.5rem;
     color: var(--grey-500);
   }
-  a {
+  /* a {
     color: var(--primary-500);
     text-decoration: underline;
     text-transform: capitalize;
-  }
-`;
+  } */
+`
 
-export default Wrapper;
+export default Wrapper
