@@ -69,7 +69,12 @@ const Register = () => {
           handleChange={handleChange}
         />
         {/* toggle button */}
-        <button type='submit' className='btn btn-block' onClick={handleSubmit}>
+        <button
+          type='submit'
+          className='btn btn-block'
+          onClick={handleSubmit}
+          disabled={isLoading}
+        >
           submit
         </button>
         <p>
