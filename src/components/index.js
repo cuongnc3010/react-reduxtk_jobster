@@ -1,2 +1,4 @@
 import Logo from './Logo'
-export { Logo }
+import FromRow from './FromRow'
+
+export { Logo, FromRow }

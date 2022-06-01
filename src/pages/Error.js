@@ -8,7 +8,6 @@ const Error = () => {
         <img src={img} alt='not found' />
         <h3>Oops, Page not found !</h3>
         <p>
-          Try another link, or &ensp;
           <Link to='/' className='btn'>
             back home
           </Link>
