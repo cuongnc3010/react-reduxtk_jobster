@@ -536,12 +536,14 @@ export const registerUser = createAsyncThunk(
   'user/registerUser',
   async (user, thunkAPI) => {
     console.log(`Register User : ${user}`)
-);
+  }
+)
 export const loginUser = createAsyncThunk(
   'user/loginUser',
   async (user, thunkAPI) => {
     console.log(`Login User : ${user}`)
-);
+  }
+)
 ```
 
 - Register.js
@@ -1041,7 +1043,6 @@ Navbar.js
 
 ```js
 import { toggleSidebar, logoutUser } from '../features/user/userSlice'
-
 ;<div className={showLogout ? 'dropdown show-dropdown' : 'dropdown'}>
   <button
     type='button'
@@ -2348,7 +2349,6 @@ Job.js
 
 ```js
 import { setEditJob, deleteJob } from '../features/job/jobSlice'
-
 ;<Link
   to='/add-job'
   className='btn edit-btn'
