@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Logo, FromRow } from '../components'
 import Wrapper from '../assets/wrappers/RegisterPage'
+import { toast } from 'react-toastify'
 //redux toolkit and useNavidgate later
 const initialState = {
   name: '',
@@ -14,11 +15,17 @@ const Register = () => {
   // reduxtoolkit and useNavigate late
 
   const handleChange = (e) => {
-    console.log(e.target)
+    const name = e.target.name
+    const value = e.target.value
+    setValues({ ...values, [name]: value })
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(e.target)
+    const { name, email, password, isMember } = values
+    if (!email || !password || (!isMember && !name)) {
+      toast.error('Please fill out all fields')
+      return
+    }
   }
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember })
