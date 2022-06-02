@@ -16,7 +16,7 @@ const Register = () => {
   const { isLoading, user } = useSelector((store) => store.user)
   const [values, setValues] = useState(initialState)
 
-  // reduxtoolkit and useNavigate late
+  // reduxtoolkit and useNavigate come later
 
   const handleChange = (e) => {
     const name = e.target.name
@@ -75,7 +75,7 @@ const Register = () => {
           onClick={handleSubmit}
           disabled={isLoading}
         >
-          submit
+          {isLoading ? 'Loading...' : 'submit'}
         </button>
         <p>
           {values.isMember ? 'Not a member yet?' : 'Already a member?'}
