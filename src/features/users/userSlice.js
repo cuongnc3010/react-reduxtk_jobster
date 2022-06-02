@@ -41,7 +41,6 @@ const userSlice = createSlice({
       state.isLoading = true
     },
     [registerUser.fulfilled]: (state, { payload }) => {
-      console.log(payload)
       state.isLoading = false
       const { user } = payload
       state.user = user
@@ -49,7 +48,6 @@ const userSlice = createSlice({
       toast.success(`Hello there, ${user.name} !`)
     },
     [registerUser.rejected]: (state, { payload }) => {
-      console.log(payload)
       state.isLoading = false
       toast.error(payload)
     },
@@ -57,7 +55,6 @@ const userSlice = createSlice({
       state.isLoading = true
     },
     [loginUser.fulfilled]: (state, { payload }) => {
-      console.log(payload)
       state.isLoading = false
       const { user } = payload
       state.user = user
@@ -65,7 +62,6 @@ const userSlice = createSlice({
       toast.success(`Welcome back, ${user.name} !`)
     },
     [loginUser.rejected]: (state, { payload }) => {
-      console.log(payload)
       state.isLoading = false
       toast.error(payload)
     },

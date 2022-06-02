@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Logo, FromRow } from '../components'
-import Wrapper from '../assets/wrappers/RegisterPage'
-import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import { toast } from 'react-toastify'
+import Wrapper from '../assets/wrappers/RegisterPage'
+import { Logo, FromRow } from '../components'
 import { loginUser, registerUser } from '../features/users/userSlice'
 //redux toolkit and useNavidgate later
 const initialState = {
@@ -12,9 +13,10 @@ const initialState = {
   isMember: true,
 }
 const Register = () => {
-  const dispatch = useDispatch()
   const { isLoading, user } = useSelector((store) => store.user)
   const [values, setValues] = useState(initialState)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   // reduxtoolkit and useNavigate come later
 
@@ -39,6 +41,13 @@ const Register = () => {
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember })
   }
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate('/')
+      }, 1500)
+    }
+  }, [user])
   return (
     <Wrapper className='full-page'>
       <form className='form' onSubmit={handleSubmit}>
