@@ -66,6 +66,9 @@ const Wrapper = styled.nav`
     display: none;
     margin: 0;
   }
+  .big-menu {
+    display: none;
+  }
   @media (min-width: 992px) {
     position: sticky;
     top: 0;
@@ -77,6 +80,12 @@ const Wrapper = styled.nav`
       display: none;
     }
     .logo-text {
+      display: block;
+    }
+    .small-menu {
+      display: none;
+    }
+    .big-menu {
       display: block;
     }
   }

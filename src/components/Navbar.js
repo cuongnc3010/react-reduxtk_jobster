@@ -4,6 +4,7 @@ import Wrapper from '../assets/wrappers/Navbar'
 import Logo from './Logo'
 import {
   FaAlignLeft,
+  FaAlignJustify,
   FaAlignCenter,
   FaUserCircle,
   FaCaretDown,
@@ -21,7 +22,12 @@ const Navbar = () => {
     <Wrapper>
       <div className='nav-center'>
         <button type='button' className='toggle-btn' onClick={toggle}>
-          {!isSidebarOpen ? <FaAlignCenter /> : <FaAlignLeft />}
+          {!isSidebarOpen ? (
+            <FaAlignCenter className='big-menu' />
+          ) : (
+            <FaAlignLeft className='big-menu' />
+          )}
+          <FaAlignJustify className='small-menu' />
         </button>
         <div>
           <Logo />
