@@ -21,7 +21,7 @@ const Landing = () => {
             art party, vinyl yr shabby chic master cleanse godard polaroid
             occupy.
           </p>
-          <Link to='/' className='btn btn-hero'>
+          <Link to='/register' className='btn btn-hero'>
             Login/Register
           </Link>
         </div>

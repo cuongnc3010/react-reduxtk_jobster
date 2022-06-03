@@ -5,7 +5,7 @@ import { toast } from 'react-toastify'
 import Wrapper from '../assets/wrappers/RegisterPage'
 import { Logo, FromRow } from '../components'
 import { loginUser, registerUser } from '../features/users/userSlice'
-//redux toolkit and useNavidgate later
+
 const initialState = {
   name: '',
   email: '',
@@ -17,8 +17,6 @@ const Register = () => {
   const [values, setValues] = useState(initialState)
   const dispatch = useDispatch()
   const navigate = useNavigate()
-
-  // reduxtoolkit and useNavigate come later
 
   const handleChange = (e) => {
     const name = e.target.name
