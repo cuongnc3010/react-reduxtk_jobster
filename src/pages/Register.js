@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { toast } from 'react-toastify'
 import Wrapper from '../assets/wrappers/RegisterPage'
-import { Logo, FromRow } from '../components'
+import { Logo, FormRow } from '../components'
 import { loginUser, registerUser } from '../features/users/userSlice'
 
 const initialState = {
@@ -54,7 +54,7 @@ const Register = () => {
         <h3>{values.isMember ? 'Login' : 'Register'}</h3>
         {/* toggle name field */}
         {!values.isMember && (
-          <FromRow
+          <FormRow
             type='text'
             name='name'
             value={values.name}
@@ -62,14 +62,14 @@ const Register = () => {
           />
         )}
         {/* email field */}
-        <FromRow
+        <FormRow
           type='email'
           name='email'
           value={values.email}
           handleChange={handleChange}
         />
         {/* password field */}
-        <FromRow
+        <FormRow
           type='password'
           name='password'
           value={values.password}
