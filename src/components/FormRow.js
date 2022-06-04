@@ -1,8 +1,8 @@
-const FromRow = ({ type, name, value, handleChange, labeltext }) => {
+const FormRow = ({ type, name, value, handleChange, labelText }) => {
   return (
     <div className='form-row'>
       <label htmlFor={name} className='form-label'>
-        {name}
+        {labelText || name}
       </label>
       <input
         type={type}
@@ -14,4 +14,4 @@ const FromRow = ({ type, name, value, handleChange, labeltext }) => {
     </div>
   )
 }
-export default FromRow
+export default FormRow
