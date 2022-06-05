@@ -3,15 +3,15 @@ import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 import { FormRow } from '../../components'
 import Wrapper from '../../assets/wrappers/DashboardFormPage'
+import { updateUser } from '../../features/users/userSlice'
 
 const Profile = () => {
   const { isLoading, user } = useSelector((store) => store.user)
   const dispatch = useDispatch()
-  console.log(user)
   const [userData, setUserData] = useState({
     name: user?.name || '',
     email: user?.email || '',
-    lastName: user?.lastname || '',
+    lastName: user?.lastName || '',
     location: user?.location || '',
   })
   const handleSubmit = (e) => {
@@ -21,6 +21,7 @@ const Profile = () => {
       toast.error('Please fill out all fields')
       return
     }
+    dispatch(updateUser({ name, email, lastName, location }))
   }
   const handleChange = (e) => {
     const name = e.target.name
@@ -46,7 +47,7 @@ const Profile = () => {
             handleChange={handleChange}
           />
           <FormRow
-            type='text'
+            type='email'
             name='email'
             value={userData.email}
             handleChange={handleChange}
