@@ -6,6 +6,10 @@ const Wrapper = styled.section`
   background: var(--white);
   padding: 3rem 2rem 4rem;
   box-shadow: var(--shadow-2);
+  transition: var(--transition);
+  :hover {
+    box-shadow: var(--shadow-4);
+  }
   h3 {
     margin-top: 0;
   }
@@ -17,6 +21,7 @@ const Wrapper = styled.section`
     max-width: 100%;
     width: 100%;
   }
+
   .form-row {
     margin-bottom: 0;
   }
@@ -39,6 +44,7 @@ const Wrapper = styled.section`
       height: 35px;
     }
   }
+
   .clear-btn {
     background: var(--grey-500);
   }

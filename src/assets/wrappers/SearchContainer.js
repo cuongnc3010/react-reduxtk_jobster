@@ -4,6 +4,7 @@ const Wrapper = styled.section`
   .form {
     width: 100%;
     max-width: 100%;
+    padding: 3rem 2rem 4rem;
   }
   .form-input,
   .form-select,
@@ -16,9 +17,13 @@ const Wrapper = styled.section`
   .form-center {
     display: grid;
     grid-template-columns: 1fr;
-    column-gap: 2rem;
+    column-gap: 1rem;
     row-gap: 0.5rem;
   }
+  h3 {
+    margin-top: 0;
+  }
+
   h5 {
     font-weight: 700;
   }

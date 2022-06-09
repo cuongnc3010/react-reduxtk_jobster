@@ -21,7 +21,7 @@ const SearchContainer = () => {
   return (
     <Wrapper>
       <form className='form'>
-        <h4>search form</h4>
+        <h3>search form</h3>
         <div className='form-center'>
           {/* search position */}
           <FormRow
@@ -54,7 +54,7 @@ const SearchContainer = () => {
             list={sortOptions}
           />
           <button
-            className='btn btn-block block-danger'
+            className='btn btn-block btn-danger'
             disabled={isLoading}
             onClick={handleSubmit}
           >
