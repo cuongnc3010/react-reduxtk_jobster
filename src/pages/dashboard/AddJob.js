@@ -106,7 +106,7 @@ const AddJob = () => {
           <div className='btn-container'>
             <button
               type='button'
-              className='btn btn-block clear-btn'
+              className='btn btn-block btn-danger'
               onClick={() => dispatch(clearValues())}
             >
               clear

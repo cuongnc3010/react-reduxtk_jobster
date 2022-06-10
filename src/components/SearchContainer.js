@@ -15,7 +15,7 @@ const SearchContainer = () => {
     dispatch(handleChange({ name, value }))
   }
   const handleSubmit = (e) => {
-    e.preventdefault()
+    e.preventDefault()
     dispatch(clearFilters())
   }
   return (
