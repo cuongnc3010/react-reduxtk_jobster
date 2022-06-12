@@ -9,7 +9,7 @@ import {
   FaUserCircle,
   FaCaretDown,
 } from 'react-icons/fa'
-import { logoutUser, toggleSidebar } from '../features/users/userSlice'
+import { toggleSidebar, clearStore } from '../features/users/userSlice'
 const Navbar = () => {
   const [showLogout, setShowLogout] = useState()
   const { user, isSidebarOpen } = useSelector((store) => store.user)
@@ -49,7 +49,7 @@ const Navbar = () => {
             <button
               className='dropdown-btn'
               onClick={() =>
-                setTimeout(() => dispatch(logoutUser('Logging out...!')), 1500)
+                setTimeout(() => dispatch(clearStore('Logging out...!')), 1500)
               }
             >
               logout
