@@ -108,7 +108,7 @@ const userSlice = createSlice({
       toast.error(payload)
     },
     [clearStore.rejected]: () => {
-      toast.error('There was an error')
+      toast.error('There was an error ...!')
     },
   },
 })
