@@ -12,6 +12,7 @@ const SearchContainer = () => {
   const handleSearch = (e) => {
     const name = e.target.name
     const value = e.target.value
+    if (isLoading) return
     dispatch(handleChange({ name, value }))
   }
   const handleSubmit = (e) => {
@@ -29,6 +30,7 @@ const SearchContainer = () => {
             name='search'
             value={search}
             handleChange={handleSearch}
+            placeHolder='search by job name...'
           />
           {/* search by status */}
           <FormRowSelect

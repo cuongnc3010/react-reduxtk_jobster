@@ -11,6 +11,7 @@ const Wrapper = styled.section`
   .btn-block {
     height: 35px;
   }
+
   .form-row {
     margin-bottom: 0;
   }
