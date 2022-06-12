@@ -4,6 +4,11 @@ const Wrapper = styled.article`
   padding: 2rem;
   background: var(--white);
   border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+  :hover {
+    box-shadow: var(--shadow-4);
+  }
   border-bottom: 5px solid ${(props) => props.color};
   header {
     display: flex;
