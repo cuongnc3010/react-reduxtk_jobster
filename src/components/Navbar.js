@@ -1,23 +1,23 @@
-import { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import Wrapper from '../assets/wrappers/Navbar'
-import Logo from './Logo'
+import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import Wrapper from '../assets/wrappers/Navbar';
+import Logo from './Logo';
 import {
   FaAlignLeft,
   FaAlignJustify,
   FaAlignCenter,
   FaUserCircle,
   FaCaretDown,
-} from 'react-icons/fa'
-import { toggleSidebar, clearStore } from '../features/users/userSlice'
+} from 'react-icons/fa';
+import { toggleSidebar, clearStore } from '../features/users/userSlice';
 const Navbar = () => {
-  const [showLogout, setShowLogout] = useState()
-  const { user, isSidebarOpen } = useSelector((store) => store.user)
-  const dispatch = useDispatch()
+  const [showLogout, setShowLogout] = useState();
+  const { user, isSidebarOpen } = useSelector((store) => store.user);
+  const dispatch = useDispatch();
 
   const toggle = () => {
-    dispatch(toggleSidebar())
-  }
+    dispatch(toggleSidebar());
+  };
   return (
     <Wrapper>
       <div className='nav-center'>
@@ -38,7 +38,7 @@ const Navbar = () => {
             className='btn'
             type='button'
             onClick={() => {
-              setShowLogout(!showLogout)
+              setShowLogout(!showLogout);
             }}
           >
             <FaUserCircle />
@@ -58,6 +58,6 @@ const Navbar = () => {
         </div>
       </div>
     </Wrapper>
-  )
-}
-export default Navbar
+  );
+};
+export default Navbar;
